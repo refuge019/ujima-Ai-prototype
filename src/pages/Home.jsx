@@ -4,165 +4,241 @@ export default function Home() {
   return (
     <div
       style={{
-        padding: "40px",
-        fontFamily: "Arial, sans-serif",
-        maxWidth: "1000px",
-        margin: "0 auto"
+        background: "#000",
+        color: "white",
+        minHeight: "100vh",
+        fontFamily: "Arial, sans-serif"
       }}
     >
-      {/* Header */}
-      <h1>UJIMA AI</h1>
+      {/* Top Navigation */}
 
-      <h2>
-        Ethical AI for SACCO Financial Inclusion
-      </h2>
-
-      <p>
-        Supporting informal traders, farmers and small businesses
-        through transparent AI-assisted lending.
-      </p>
-
-      {/* Navigation */}
       <div
         style={{
           display: "flex",
-          gap: "20px",
-          marginTop: "25px",
-          marginBottom: "30px"
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "30px 50px",
+          borderBottom: "1px solid #333"
         }}
       >
-        <Link to="/apply">
-          Apply For Loan
-        </Link>
+        <h1
+          style={{
+            margin: 0,
+            fontSize: "36px"
+          }}
+        >
+          🟢 Ujima AI
+        </h1>
 
-        <Link to="/dashboard">
-          Dashboard
-        </Link>
-
-        <Link to="/ethics">
-          Ethics
-        </Link>
+        <div
+          style={{
+            background: "#222",
+            padding: "10px 20px",
+            borderRadius: "30px"
+          }}
+        >
+          MVP Demo
+        </div>
       </div>
 
-      <hr />
+      {/* Hero Section */}
 
-      {/* Workflow Section */}
-      <h2>Agent Pride Workflow</h2>
+      <div
+        style={{
+          textAlign: "center",
+          padding: "80px 20px"
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "64px",
+            marginBottom: "20px"
+          }}
+        >
+          Fair lending for every trader
+        </h1>
+
+        <p
+          style={{
+            fontSize: "24px",
+            color: "#ccc",
+            maxWidth: "900px",
+            margin: "0 auto"
+          }}
+        >
+          AI-powered loan screening built for Kenyan SACCOs —
+          respecting harvest cycles, informal income and local
+          context.
+        </p>
+      </div>
+
+      {/* Agent Cards */}
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+          gap: "25px",
+          padding: "20px 50px"
+        }}
+      >
+        <div
+          style={{
+            background: "#1f1f1f",
+            borderRadius: "20px",
+            padding: "30px",
+            textAlign: "center"
+          }}
+        >
+          <h2>🌱 Scout Agent</h2>
+
+          <p>
+            Financial literacy coach. Guides members before
+            they apply.
+          </p>
+        </div>
+
+        <div
+          style={{
+            background: "#1f1f1f",
+            borderRadius: "20px",
+            padding: "30px",
+            textAlign: "center"
+          }}
+        >
+          <h2>🛡 Guardian Agent</h2>
+
+          <p>
+            Loan triage. Screens applications fairly using
+            harvest data.
+          </p>
+        </div>
+
+        <div
+          style={{
+            background: "#1f1f1f",
+            borderRadius: "20px",
+            padding: "30px",
+            textAlign: "center"
+          }}
+        >
+          <h2>🎯 Hunter Agent</h2>
+
+          <p>
+            Human coordinator. Prepares briefings for loan
+            officers.
+          </p>
+        </div>
+      </div>
+
+      {/* Impact Metrics */}
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+          gap: "20px",
+          padding: "40px 50px"
+        }}
+      >
+        <div
+          style={{
+            background: "#1f1f1f",
+            borderRadius: "20px",
+            padding: "30px",
+            textAlign: "center"
+          }}
+        >
+          <h1 style={{ color: "#16a085" }}>37%</h1>
+
+          <p>More female vendor approvals</p>
+        </div>
+
+        <div
+          style={{
+            background: "#1f1f1f",
+            borderRadius: "20px",
+            padding: "30px",
+            textAlign: "center"
+          }}
+        >
+          <h1>80%</h1>
+
+          <p>Tier-1 queries handled by AI</p>
+        </div>
+
+        <div
+          style={{
+            background: "#1f1f1f",
+            borderRadius: "20px",
+            padding: "30px",
+            textAlign: "center"
+          }}
+        >
+          <h1 style={{ color: "#2e86de" }}>&lt;3%</h1>
+
+          <p>Target default rate</p>
+        </div>
+      </div>
+
+      {/* CTA Buttons */}
 
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           gap: "20px",
-          marginTop: "25px"
+          padding: "0 50px 80px"
         }}
       >
-
-        <div
+        <Link
+          to="/apply"
           style={{
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "20px"
-          }}
-        >
-          <h3>Scout Agent</h3>
-
-          <p>
-            Captures loan applications and member information.
-          </p>
-        </div>
-
-        <div
-          style={{
+            textDecoration: "none",
+            color: "white",
+            border: "2px solid white",
+            borderRadius: "16px",
+            padding: "20px",
             textAlign: "center",
-            fontSize: "24px"
+            fontSize: "24px",
+            fontWeight: "bold"
           }}
         >
-          ↓
-        </div>
+          Apply for a Loan →
+        </Link>
 
-        <div
+        <Link
+          to="/login"
           style={{
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "20px"
-          }}
-        >
-          <h3>Guardian Agent</h3>
-
-          <p>
-            Reviews repayment capacity, harvest cycles,
-            income stability and risk indicators.
-          </p>
-        </div>
-
-        <div
-          style={{
+            textDecoration: "none",
+            color: "white",
+            border: "2px solid white",
+            borderRadius: "16px",
+            padding: "20px",
             textAlign: "center",
-            fontSize: "24px"
+            fontSize: "24px",
+            fontWeight: "bold"
           }}
         >
-          ↓
-        </div>
+          Loan Officer Dashboard
+        </Link>
 
-        <div
+        <Link
+          to="/ethics"
           style={{
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "20px"
-          }}
-        >
-          <h3>Hunter Agent</h3>
-
-          <p>
-            Coordinates human review for applications
-            requiring additional oversight.
-          </p>
-        </div>
-
-        <div
-          style={{
+            textDecoration: "none",
+            color: "white",
+            border: "2px solid white",
+            borderRadius: "16px",
+            padding: "20px",
             textAlign: "center",
-            fontSize: "24px"
+            fontSize: "24px",
+            fontWeight: "bold"
           }}
         >
-          ↓
-        </div>
-
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "20px"
-          }}
-        >
-          <h3>Decision Recorded</h3>
-
-          <p>
-            Final decision is stored in the audit trail
-            and written to the system database.
-          </p>
-        </div>
-
+          Ethical Architecture
+        </Link>
       </div>
-
-      <hr style={{ marginTop: "40px" }} />
-
-      {/* Project Summary */}
-      <h2>Project Overview</h2>
-
-      <p>
-        Ujima AI is a lightweight fintech MVP designed
-        to improve access to ethical lending for informal
-        traders, farmers and SACCO members.
-      </p>
-
-      <p>
-        The platform combines AI-assisted recommendations
-        with mandatory human review for higher-risk
-        applications, ensuring transparency,
-        accountability and fairness.
-      </p>
     </div>
   );
 }
